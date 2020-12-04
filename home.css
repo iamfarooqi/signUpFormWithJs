@@ -1,0 +1,19 @@
+body {
+    
+    background-image: url(./images/bg-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+}
+
+
+.p-info {
+    width: 50%;
+    height: 500px;
+    margin-left: 25%;
+    padding: 3%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
