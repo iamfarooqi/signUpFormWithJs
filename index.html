@@ -12,7 +12,7 @@
 
 
 
-    <form action="">
+    <form onsubmit="return input()">
 
 
         <fieldset>
@@ -28,20 +28,21 @@
             <div class="p-info">
 
                 <label class="name1" for="">Name:</label> <br>
-                <input class="name" type="text" placeholder="Enter your name" required>
+                <input class="name" id="fname" type="text" placeholder="Enter your name" required>
                 <br> <br>
                 <label class="mail1" for="">Email:</label> <br>
-                <input class="email" type="email" placeholder="Enter your mail" required>
+                <input class="email" id="email" type="email" placeholder="Enter your mail" required>
                 <br> <br>
                 <label class="password1" for="">Password:</label> <br>
-                <input class="password" type="password" placeholder="Enter your mail" required>
+                <input class="password" id="password" type="password" placeholder="Enter your password" required>
 
             </div>
 
             <br>
             <label class="gender" for="">Gender:</label>
             <br>
-            &nbsp; &nbsp; &nbsp;  Male<input type="radio" name="gender" required>  &nbsp;
+            &nbsp; &nbsp; &nbsp; 
+            Male<input type="radio" name="gender" required> &nbsp;
             Female<input type="radio" name="gender">
 
             <br> <br>
@@ -50,6 +51,35 @@
 
         </fieldset>
 
+
+        <script>
+            var fname = [];
+            var email = [];
+            var password = [];
+
+
+
+            function input() {
+                fname.push(document.getElementById("fname").value );
+                email.push(document.getElementById("email").value );
+                password.push(document.getElementById("password").value );
+
+
+                localStorage.setItem("fname",  fname);
+                localStorage.setItem("email", email);
+                localStorage.setItem("password", password);
+
+               
+
+                alert("SignUp Sucessfully")
+
+                window.location.href = "./signin.html"
+                return (false);
+
+            }
+
+
+        </script>
 
 
 
