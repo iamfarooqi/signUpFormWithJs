@@ -15,7 +15,7 @@
 
                 localStorage.setItem("fname",  fname);
                 localStorage.setItem("email", JSON.stringify(email));
-                localStorage.setItem("password",JSON.stringify(password));
+                localStorage.setItem("password", JSON.stringify(password));
 
                
 
