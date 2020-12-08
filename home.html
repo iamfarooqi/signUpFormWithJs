@@ -10,15 +10,18 @@
 
 <body>
 
+    <input class="btn" type="submit" onclick="clears()">
+
 
             <div class="p-info">
 
                 
                <h1 id="namee">Name:</h1>
                <h1 id="emaill">Email:</h1>
-               <h1 id="genderr">Gender:</h1>
                
             </div>
+
+  
 
          
 </body>
@@ -26,11 +29,14 @@
 
  <script>
 
-    //   var hnames = JSON.parse(localStorage.getItem("namee"))
-    //   var hemails = JSON.parse(localStorage.getItem("emaill")) -->
+function clears() {
+        window.localStorage.clear();
+        window.location.href = "signin.html";
+    }
 
-document.getElementById("namee").innerHTML = `<h1>Name:</h1>${localStorage.getItem("fname")}`
-document.getElementById("emaill").innerHTML = `<h1>Email:</h1>${localStorage.getItem("email")}`
+
+document.getElementById("namee").innerHTML = `<h6>Name:</h6>${localStorage.getItem("fname")}`
+document.getElementById("emaill").innerHTML = `<h6>Email:</h6>${localStorage.getItem("email")}`
     
 
 

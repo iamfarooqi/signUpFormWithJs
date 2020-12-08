@@ -35,9 +35,9 @@
                 <input class="password" id="password" type="password" placeholder="Enter your password" required>
 
             </div>
-         </form>
+    </form>
     <br>
-         <button class="btn1" type="submit"> SignIn</button>
+    <button class="btn1" type="submit"> SignIn</button>
 
     </fieldset>
 
@@ -48,22 +48,26 @@
 
     <script>
 
-        var names = JSON.parse(localStorage.getItem("names"))
-        var emails = JSON.parse(localStorage.getItem("emails"))
-        var passwords = JSON.parse(localStorage.getItem("passwords"))
-        var isFound;
+
+
         function login() {
+
+
 
 
             const email = document.getElementById("email").value;
             const password = document.getElementById("password").value;
-           
+            let isFound = false;
+
+            var names = JSON.parse(localStorage.getItem("name"));
+            var emails = JSON.parse(localStorage.getItem("email"));
+            var passwords = JSON.parse(localStorage.getItem("password"));
 
 
-            for (let i = 0; i < email.length; i++) {
 
-                if (emails === email[i]) {
+            for (let i = 0; i < emails.length; i++) {
 
+                if (emails[i] === email) {
                     isFound = i;
                     break;
                 }
@@ -78,10 +82,10 @@
 
 
 
-            } else if (password[isFound] == passwords) {
+            } else if (passwords[isFound] === password) {
                 alert("login sucess");
 
-               window.location.href = "./home.html"
+                window.location.href = "./home.html"
 
 
 
@@ -90,7 +94,7 @@
             }
 
 
-            return (false);
+            return false;
         }
 
 
