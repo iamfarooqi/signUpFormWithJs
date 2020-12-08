@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./app.js"></script>
 </head>
 
 <body>
@@ -46,59 +47,7 @@
 
 
 
-    <script>
-
-
-
-        function login() {
-
-
-
-
-            const email = document.getElementById("email").value;
-            const password = document.getElementById("password").value;
-            let isFound = false;
-
-            var names = JSON.parse(localStorage.getItem("name"));
-            var emails = JSON.parse(localStorage.getItem("email"));
-            var passwords = JSON.parse(localStorage.getItem("password"));
-
-
-
-            for (let i = 0; i < emails.length; i++) {
-
-                if (emails[i] === email) {
-                    isFound = i;
-                    break;
-                }
-
-
-
-            }
-
-
-            if (isFound === false) {
-                alert("user not found")
-
-
-
-            } else if (passwords[isFound] === password) {
-                alert("login sucess");
-
-                window.location.href = "./home.html"
-
-
-
-            } else {
-                alert('Error password or username')
-            }
-
-
-            return false;
-        }
-
-
-    </script>
+   
 </body>
 
 </html>

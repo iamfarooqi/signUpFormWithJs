@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="home.css">
+   
 </head>
 
 <body>
@@ -27,22 +28,21 @@
 </body>
 
 
- <script>
+<script>
+    
 
-function clears() {
-        window.localStorage.clear();
-        window.location.href = "signin.html";
-    }
+    function clears() {
+    window.localStorage.clear();
+    window.location.href = "signin.html";
+}
 
 
 document.getElementById("namee").innerHTML = `<h6>Name:</h6>${localStorage.getItem("fname")}`
 document.getElementById("emaill").innerHTML = `<h6>Email:</h6>${localStorage.getItem("email")}`
     
-
-
-
-
-
 </script>
+
+
+ 
 
 </html>

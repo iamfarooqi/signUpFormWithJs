@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="./app.js"></script>
 </head>
 
 <body>
@@ -52,35 +53,7 @@
         </fieldset>
 
 
-        <script>
-            var fname = [];
-            var email = [];
-            var password = [];
-
-
-
-            function input() {
-                fname.push(document.getElementById("fname").value );
-                email.push(document.getElementById("email").value );
-                password.push(document.getElementById("password").value );
-
-
-                localStorage.setItem("fname",  fname);
-                localStorage.setItem("email", JSON.stringify(email));
-                localStorage.setItem("password",JSON.stringify(password));
-
-               
-
-                alert("SignUp Sucessfully")
-
-                window.location.href = "./signin.html"
-                return (false);
-
-            }
-
-
-        </script>
-
+        
 
 
 
